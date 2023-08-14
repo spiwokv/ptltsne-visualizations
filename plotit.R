@@ -1,0 +1,33 @@
+library(metadynminer3d)
+myhills <- read.hills3d("HILLS")
+myfes <- fes(myhills, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+myfes <- myfes - min(myfes)
+
+par3d(windowRect = c(0, 0, 3000, 3000))
+rgl.viewpoint(theta = 20.0, phi= 10.0)
+plot(myfes, level=10, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+axes3d(lwd=4, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+htmlwidgets::saveWidget(rglwidget(), 'fes10.html')
+clear3d()
+
+par3d(windowRect = c(0, 0, 3000, 3000))
+rgl.viewpoint(theta = 20.0, phi= 10.0)
+plot(myfes, level=20, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+axes3d(lwd=4, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+htmlwidgets::saveWidget(rglwidget(), 'fes20.html')
+clear3d()
+
+par3d(windowRect = c(0, 0, 3000, 3000))
+rgl.viewpoint(theta = 20.0, phi= 10.0)
+plot(myfes, level=30, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+axes3d(lwd=4, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+htmlwidgets::saveWidget(rglwidget(), 'fes30.html')
+clear3d()
+
+par3d(windowRect = c(0, 0, 3000, 3000))
+rgl.viewpoint(theta = 20.0, phi= 10.0)
+plot(myfes, level=40, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+axes3d(lwd=4, xlim=c(-20,20), ylim=c(-15,25), zlim=c(0,11))
+htmlwidgets::saveWidget(rglwidget(), 'fes40.html')
+clear3d()
+
